@@ -65,8 +65,8 @@ server.use(function (req, res, next) {
         // once you keep this project to other place, remember
         // to change any read write path in this project and
         // the arduino one.
-        require('./file_write').writeFile(message, "/root/wifi_printer/files/message.txt");
-        require('./file_write').writeFile('1', "/root/wifi_printer/files/printer_status.txt");
+        require('./file_write').writeFile(message, "/tmp/message.txt");
+        require('./file_write').writeFile('1', "/tmp/printer_status.txt");
     }
 });
 

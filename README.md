@@ -51,6 +51,8 @@ config wifi-iface 'sta'
 > cd wifiPrinter_js/script
 > chmod +x clear_printer_status.sh wifiPrinter
 > cp wifiPrinter /etc/init.d/
+> cd ..
+> npm install
 > /etc/init.d/wifiPrinter enable
 > /etc/init.d/wifiPrinter start &
 > reboot

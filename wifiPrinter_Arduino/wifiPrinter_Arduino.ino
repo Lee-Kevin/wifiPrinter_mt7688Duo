@@ -38,7 +38,7 @@ void getMessage()
   memset(g_Buffer, '\0', BUF_SIZE);
   
   p.begin("cat");  
-  p.addParameter("/root/wifiPrinter_js/files/printer_status.txt");     
+  p.addParameter("/tmp/printer_status.txt");     
   p.run();  
 
   while (p.available() > 0) {
@@ -62,7 +62,7 @@ void getMessage()
     index = 0;
     
     p.begin("cat");  
-    p.addParameter("/root/wifiPrinter_js/files/message.txt");     
+    p.addParameter("/tmp/message.txt");     
     p.run();  
 
     while (p.available() > 0) {
