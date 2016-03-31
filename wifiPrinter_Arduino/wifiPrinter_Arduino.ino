@@ -38,7 +38,7 @@ void getMessage()
   memset(g_Buffer, '\0', BUF_SIZE);
   
   p.begin("cat");  
-  p.addParameter("/root/wifi_printer/files/printer_status.txt");     
+  p.addParameter("/root/wifiPrinter_js/files/printer_status.txt");     
   p.run();  
 
   while (p.available() > 0) {
@@ -55,14 +55,14 @@ void getMessage()
   
   if(strstr("1", g_Buffer)) {
     p.begin("/bin/ash");  
-    p.addParameter("/root/wifi_printer/script/clear_printer_status.sh");     
+    p.addParameter("/root/wifiPrinter_js/script/clear_printer_status.sh");     
     p.run();
     
     memset(g_Buffer, '\0', BUF_SIZE);
     index = 0;
     
     p.begin("cat");  
-    p.addParameter("/root/wifi_printer/files/message.txt");     
+    p.addParameter("/root/wifiPrinter_js/files/message.txt");     
     p.run();  
 
     while (p.available() > 0) {

@@ -37,20 +37,24 @@ config wifi-iface 'sta'
 > wifi
 </pre>
 
-* First you need to enable yunbridge 
+* Enable yunbridge 
 <pre>
 > uci set yunbridge.config.disabled='0'
 > uci commit
 </pre>
-* Then setting startup script 
+
+* Download code and setting 
 <pre>
-> chmod +x wifiPrinter_js/wifi_printer/script/wifiPrinter
-> cp wifiPrinter_js/wifi_printer/script/wifiPrinter /etc/init.d/
+> git clone https://github.com/lanselambor/wifiPrinter_mt7688Duo
+> mv wifiPrinter_mt7688Duo/wifiPrinter_js/ .
+> rm wifiPrinter_mt7688Duo/ -rf
+> cd wifiPrinter_js/script
+> chmod +x clear_printer_status.sh wifiPrinter
+> cp wifiPrinter /etc/init.d/
 > /etc/init.d/wifiPrinter enable
 > /etc/init.d/wifiPrinter start &
 > reboot
 </pre>
-
 
 ## Using Arduino IDE to upload Arduino sketch
 * Download this repository to your computer and copy the Arduino library to your IDE's library path, open routerBox_Arduino.ino with Arduino IDE compile and upload sketch.
