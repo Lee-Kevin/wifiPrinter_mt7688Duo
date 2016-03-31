@@ -32,6 +32,10 @@ config wifi-iface 'sta'
         option encryption 'psk'
         option disabled '1'     # 0 to enable
 </pre>
+* Type cmdline **wifi** to let wifi work.
+<pre>
+> wifi
+</pre>
 
 * First you need to enable yunbridge 
 <pre>
