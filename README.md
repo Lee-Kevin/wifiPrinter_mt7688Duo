@@ -53,6 +53,19 @@ config wifi-iface 'sta'
 > cp wifiPrinter /etc/init.d/
 > cd ..
 > npm install
+</pre>
+
+* Change user and passwd **vi users.json**
+<pre>
+{
+    "admin": {
+        "password": "123456",
+        "name": "test"
+    }
+}
+</pre>
+
+<pre>
 > /etc/init.d/wifiPrinter enable
 > /etc/init.d/wifiPrinter start &
 > reboot

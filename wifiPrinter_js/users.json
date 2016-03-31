@@ -3,4 +3,9 @@
         "password": "123456",
         "name": "lambor"
     }
+    
+    "test": {
+        "password": "888888",
+        "name": "test"
+    }
 }
