@@ -55,7 +55,8 @@ config wifi-iface 'sta'
 > npm install
 </pre>
 
-* Change user and passwd **vi users.json**
+* Change user and passwd **vi users.json** <br>
+log in with user name **admin** and password.
 <pre>
 {
     "admin": {
